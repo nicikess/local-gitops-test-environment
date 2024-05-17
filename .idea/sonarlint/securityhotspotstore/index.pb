@@ -1,11 +1,27 @@
 
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-Q
-!apps/base/root-application 2.yaml,b/7/b75051bf50345c4ef6819c46ce6dda8e014b2136
 O
 apps/root/root-application.yaml,3/a/3a2bcefbb21ce055ba8a53243ebe8622c23b565c
 P
  apps/base/frontend-template.yaml,0/e/0ef7215ce754f7877493bf3c0c82cd4833b91d56
 O
 apps/base/backend-template.yaml,d/8/d89dd02966bc1c55c1f32264e5ed175c17ebae1c
+Y
+)charts/frontend/templates/deployment.yaml,d/3/d371dc8cdc56ece6add78a8804a8aebcf1eacf50
+X
+(charts/backend/templates/deployment.yaml,8/7/871e9275eb33f6980fe3e2465402ba0b9a7cb94d
+J
+charts/frontend/Chart.yaml,c/8/c84e468083f3253596b9e4e80af30e9abf57792e
+S
+#charts/backend/templates/Chart.yaml,6/8/683e2cdfc8c9414ec8717031196ec4799d28309e
+V
+&charts/frontend/frontend-template.yaml,1/3/13d7abec68c5e1e12519a2247b75ffaca42801a0
+K
+charts/frontend/values.yaml,1/d/1d8e70eb982a9b776fff6b22f7a3fc19b7eb1b6f
+V
+&charts/frontend/templates/service.yaml,e/b/eb4291a7b1295094c73ff0b925c3477ebbefc87d
+U
+%charts/backend/templates/service.yaml,5/f/5fc20fe7f21ba8c526e502ac6514890568ac0ef7
+J
+charts/backend/values.yaml,1/6/1695b364a1b47669467745afbc3ca3f910e23ac5

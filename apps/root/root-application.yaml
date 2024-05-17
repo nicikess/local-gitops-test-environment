@@ -17,8 +17,12 @@ spec:
       project: default
       source:
         repoURL: 'https://github.com/your-repo'
-        path: 'base/frontend-template.yaml'
+        path: 'charts/frontend'
         targetRevision: HEAD
+        helm:
+          parameters:
+            - name: "image.tag"
+              value: "latest"
       destination:
         server: '{{cluster}}'
         namespace: '{{environment}}'
@@ -43,8 +47,12 @@ spec:
       project: default
       source:
         repoURL: 'https://github.com/your-repo'
-        path: 'base/backend-template.yaml'
+        path: 'charts/backend'
         targetRevision: HEAD
+        helm:
+          parameters:
+            - name: "image.tag"
+              value: "latest"
       destination:
         server: '{{cluster}}'
         namespace: '{{environment}}'
