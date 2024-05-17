@@ -1,0 +1,50 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: frontend-applicationset
+spec:
+  generators:
+    - list:
+        elements:
+          - environment: dev
+            cluster: https://kubernetes.default.svc
+          - environment: prod
+            cluster: https://kubernetes.default.svc
+  template:
+    metadata:
+      name: 'frontend-{{environment}}'
+    spec:
+      project: default
+      source:
+        repoURL: 'https://github.com/your-repo'
+        path: 'base/frontend-template.yaml'
+        targetRevision: HEAD
+      destination:
+        server: '{{cluster}}'
+        namespace: '{{environment}}'
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: backend-applicationset
+spec:
+  generators:
+    - list:
+        elements:
+          - environment: dev
+            cluster: https://kubernetes.default.svc
+          - environment: prod
+            cluster: https://kubernetes.default.svc
+  template:
+    metadata:
+      name: 'backend-{{environment}}'
+    spec:
+      project: default
+      source:
+        repoURL: 'https://github.com/your-repo'
+        path: 'base/backend-template.yaml'
+        targetRevision: HEAD
+      destination:
+        server: '{{cluster}}'
+        namespace: '{{environment}}'
