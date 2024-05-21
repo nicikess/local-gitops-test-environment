@@ -10,4 +10,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ include "chartname.labels" . | default .Release.Name }}
+    app: {{ .Release.Name }}
