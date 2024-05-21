@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}
-  labels:
-    app: {{ .Release.Name }}
+  name: specific-service-name  # Custom name for the service
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +10,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ .Release.Name }}
+    app: {{ include "chartname.labels" . | default .Release.Name }}
